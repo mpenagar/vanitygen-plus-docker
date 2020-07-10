@@ -1,4 +1,4 @@
-[![Docker Stars](https://img.shields.io/docker/stars/mpenagar/vanitygen-plusr.svg?style=flat-square)](https://hub.docker.com/r/mpenagar/vanitygen-plus/)
+[![Docker Stars](https://img.shields.io/docker/stars/mpenagar/vanitygen-plus.svg?style=flat-square)](https://hub.docker.com/r/mpenagar/vanitygen-plus/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mpenagar/vanitygen-plus.svg?style=flat-square)](https://hub.docker.com/r/mpenagar/vanitygen-plus/)
 
 
