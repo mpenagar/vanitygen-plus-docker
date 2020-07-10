@@ -13,21 +13,21 @@ Usage Example (4xCPU)
 -------------------
 
 ```bash
-$ docker run --rm mpenagar/vanitygen-plus -t 4 -C BTC 1abc
+$ docker run --rm --network none mpenagar/vanitygen-plus -t 4 -C BTC 1abc
 ```
 
 Usage Example (4xGPU)
 -------------------
 
 ```bash
-$ docker run -i --gpus '"device=0,1,2,3"' --rm mpenagar/vanitygen-plus -D 0:0 -D 0:1 -D 0:2 -D 0:3 -C BTC 1abc
+$ docker run --gpus '"device=0,1,2,3"' --rm --network none mpenagar/vanitygen-plus -D 0:0 -D 0:1 -D 0:2 -D 0:3 -C BTC 1abc
 ```
 
 Command Help
 -------------
 
 ```bash
-$ docker run --rm mpenagar/vanitygen-plus
+$ docker run --rm --network none mpenagar/vanitygen-plus
 ```
 
 Don't trust
@@ -39,7 +39,7 @@ You can easily build your own docker image and run vanitygen-plus from your buil
 $ git clone https://github.com/mpenagar/vanitygen-plus
 $ cd vanitygen-plus
 $ docker build -t vanitygen-plus .
-$ docker run --rm vanitygen-plus -t 4 -C BTC 1abc
+$ docker run --rm --network none vanitygen-plus -t 4 -C BTC 1abc
 ```
 
 Add some entropy
@@ -48,7 +48,7 @@ Add some entropy
 You can seed the random number generator from a file `-s <file>`. A simple method is typing some random chars:
 
 ```bash
-$ docker run --rm -i  mpenagar/vanitygen-plus -t 4 -s /dev/stdin -C BTC 1abc << END
+$ docker run -i --rm --network none mpenagar/vanitygen-plus -t 4 -s /dev/stdin -C BTC 1abc << END
 > write here
 > some random chars
 > and end with
